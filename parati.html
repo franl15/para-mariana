@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Un Mensaje Especial</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #f0f8ff;
+            font-family: Arial, sans-serif;
+            overflow: hidden;
+        }
+        .container {
+            text-align: center;
+            position: relative;
+            z-index: 1;
+        }
+        h1 {
+            color: #ff69b4;
+        }
+        p {
+            font-size: 1.2em;
+        }
+        .heart {
+            position: absolute;
+            bottom: -50px; /* Ajusta esta propiedad para que los corazones salgan desde abajo */
+            width: 50px;
+            height: 50px;
+            background: #ff69b4;
+            transform: rotate(-45deg);
+            animation: float 5s infinite;
+        }
+        .heart::before,
+        .heart::after {
+            content: '';
+            position: absolute;
+            width: 50px;
+            height: 50px;
+            background: #ff69b4;
+            border-radius: 50%;
+        }
+        .heart::before {
+            top: -25px;
+            left: 0;
+        }
+        .heart::after {
+            left: 25px;
+            top: 0;
+        }
+        @keyframes float {
+            0% {
+                transform: translateY(0) rotate(-45deg);
+                opacity: 1;
+            }
+            100% {
+                transform: translateY(-100vh) rotate(-45deg);
+                opacity: 0;
+            }
+        }
+        .bear {
+            position: absolute;
+            bottom: 20px;
+            width: 100px;
+            height: auto;
+            animation: bounce 2s infinite;
+        }
+        @keyframes bounce {
+            0%, 100% {
+                transform: translateY(0);
+            }
+            50% {
+                transform: translateY(-20px);
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Holis Mariana</h1>
+        <p>Quiero que sepas que eres lo mas lindo que hay ,hermosa,linda y  una enfermedad no va a cambiar eso ojitos lindos.</p>
+    </div>
+    <div class="heart" style="left: 10%; animation-delay: 0s;"></div>
+    <div class="heart" style="left: 20%; animation-delay: 1s;"></div>
+    <div class="heart" style="left: 30%; animation-delay: 2s;"></div>
+    <div class="heart" style="left: 40%; animation-delay: 3s;"></div>
+    <div class="heart" style="left: 50%; animation-delay: 4s;"></div>
+    <div class="heart" style="left: 60%; animation-delay: 5s;"></div>
+    <div class="heart" style="left: 70%; animation-delay: 6s;"></div>
+    <div class="heart" style="left: 80%; animation-delay: 7s;"></div>
+    <div class="heart" style="left: 90%; animation-delay: 8s;"></div>
+
+    <!-- Imágenes de ositos -->
+    <img src="https://th.bing.com/th/id/R.25c8f73ca7b3db2d4b5e396fbf63dd80?rik=%2bfASrFp2QxzQVA&pid=ImgRaw&r=0" alt="Osito" class="bear" style="left: 25%; animation-delay: 0s;">
+    <img src="https://th.bing.com/th/id/R.25c8f73ca7b3db2d4b5e396fbf63dd80?rik=%2bfASrFp2QxzQVA&pid=ImgRaw&r=0" alt="Osito" class="bear" style="left: 50%; animation-delay: 1s;">
+    <img src="https://th.bing.com/th/id/R.25c8f73ca7b3db2d4b5e396fbf63dd80?rik=%2bfASrFp2QxzQVA&pid=ImgRaw&r=0" alt="Osito" class="bear" style="left: 75%; animation-delay: 2s;">
+</body>
+</html>
